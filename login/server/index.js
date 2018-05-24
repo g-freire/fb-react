@@ -17,7 +17,6 @@ app.use('/api/users', users);
 
 const compiler = webpack(webpackConfig);
 
-// в данной секции будем подключать миделвары
 app.use(webpackMiddleware(compiler, {
   hot: true,
   publicPath: webpackConfig.output.publicPath,
